@@ -22,6 +22,7 @@ public class TestRegistrationForm {
     @Test
     void parameters() {
         String First_name = "Alexander";
+        String foto = "Lesson_2.JPG";
         open("/automation-practice-form");
 
         $("[id=firstName]").setValue(First_name); // Ввод Имени
@@ -35,7 +36,7 @@ public class TestRegistrationForm {
         $("[aria-label$='October 27th, 1993']").click();
         $("[id=subjectsInput]").setValue("English").pressEnter(); //Выбор предмета
         $(byText("Sports")).click(); //Выбор хобби
-        $("[id=uploadPicture]").uploadFromClasspath("Lesson_2.png"); //Выбор картинки
+        $("[id=uploadPicture]").uploadFromClasspath(foto); //Выбор картинки
         $("[id=currentAddress]").setValue("Stalin street 37"); //Ввод улицы
         $("[id=state]").click(); // Выбор государства
         $(byText("NCR")).click();
@@ -44,7 +45,7 @@ public class TestRegistrationForm {
         $("[id=submit]").click(); //Подтверждение регистрации
 
         $(".table-responsive").shouldHave(text("Student Name	" + First_name + " Popov"), //Проверка формы регистрации
-                text("Mobile 8952724578"), text("Picture Lesson_2.png"), text("Student Email example1993@gmail.com"),
+                text("Mobile 8952724578"), text("Picture Lesson_2.JPG"), text("Student Email example1993@gmail.com"),
                 text("Gender Male"), text("Date of Birth 27 October,1993"), text("Subjects English"),
                 text("Hobbies Sports"), text("Address Stalin street 37"), text("State and City NCR Delhi"));
 
