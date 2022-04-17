@@ -6,7 +6,6 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 
-
 public class TestRegistrationFormWithPageObjects {
     RegistrationPage registrationPage = new RegistrationPage();
 
@@ -36,11 +35,6 @@ public class TestRegistrationFormWithPageObjects {
                 .setSubmit()
 
                 .chekResult();
-
-
-
-
-
 
     }
 }

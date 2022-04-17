@@ -11,7 +11,7 @@ public class RegistrationPage {
     CalendarComponent calendar = new CalendarComponent();
     Faker faker = new Faker();
 
-        String  firstName = faker.name().firstName(),
+    String firstName = faker.name().firstName(),
             lastName = faker.name().lastName(),
             userEmail = faker.internet().emailAddress(),
             gender = faker.demographic().sex(),
@@ -100,10 +100,10 @@ public class RegistrationPage {
         return this;
     }
 
-    public RegistrationPage chekResult(){
-        $(".table-responsive").shouldHave(text(firstName),text(lastName), text(userEmail),
-                text(currentAdress), text(gender), text(day+" "+month+","+year), text(subject), text(hobbies),
-                text(foto), text(state+" "+city));
+    public RegistrationPage chekResult() {
+        $(".table-responsive").shouldHave(text(firstName), text(lastName), text(userEmail),
+                text(currentAdress), text(gender), text(day + " " + month + "," + year), text(subject), text(hobbies),
+                text(foto), text(state + " " + city));
         return this;
     }
 
