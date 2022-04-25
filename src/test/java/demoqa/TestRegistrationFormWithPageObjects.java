@@ -17,7 +17,7 @@ public class TestRegistrationFormWithPageObjects {
     }
 
     @Test
-    void parameters() {
+    void testForm() {
 
         registrationPage.openPage()
                 .setFirstName()
